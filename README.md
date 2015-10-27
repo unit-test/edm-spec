@@ -70,7 +70,7 @@
 <td width="200"></td>
 ```
 width height 属性中不要设置 `px` ，会在 outlook 失效
-```
+```html
 <td width="200px"></td>    错误
 ```
 
@@ -79,7 +79,7 @@ width height 属性中不要设置 `px` ，会在 outlook 失效
 
 ## 链接必须全部是绝对路径
 
-```
+```html
 // 可以
 <a href="http://www.emailcar.net/index.html">
 // 不可以
