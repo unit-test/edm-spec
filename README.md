@@ -2,6 +2,10 @@
 
 > EDM 制作规范
 
+## html
+
+只使用 `<div>` `<a>` `<span>` `<table>` `<tr>` `<td>` `<br>`  `<map>` `<area>` 标签可以避免很多默认样式造成的错位问题
+
 ## CSS书写方式
 
 请在行间书写 CSS
@@ -65,6 +69,10 @@
 ```html
 <td width="200"></td>
 ```
+width height 属性中不要设置 `px` ，会在 outlook 失效
+```
+<td width="200px"></td>    错误
+```
 
 ## 不要使用 form表单 JavaScript Flash
 邮箱不完全不支持JavaScript Flash，部分邮箱支持 form表单
@@ -82,8 +90,11 @@
 
 模板加入预览退订投诉信息，加在头部或底部（根据设计稿），如果没有设计进去，默认加在头部。
 
-```
+**此链接只适用于 http://www.emailcar.net**
+
+```html
 <%=unsubscribe%>   退订变量
+<%=complaints%>    投诉变量
 <%=tplview%>       预览变量
 ```
 
@@ -107,7 +118,8 @@
 2. 图片属性添加display:block，因为在图像下填充额外的像素
 3. 图片属性添加border:0;，因为加链接会产生蓝色边框
 4. 建议图片都设置固定的宽和高
-5. 图片储存尽可能小，JPG(质量为50-80)。GIF PNG8(质量128)
+5. 图片真实尺寸应该与设置 的 `width` `height` 一致
+6. 图片储存尽可能小，JPG(质量为50-80)。GIF PNG8(质量128)
   颜色比较丰富的图片用JPG格式，图会清晰点 文件也小点
   颜色比较单一的用GIF PNG8，图会清晰点 文件也小点
 
